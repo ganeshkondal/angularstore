@@ -1,0 +1,39 @@
+
+<div class="container-fluid">
+    <span class='span4'></span>
+    <div class="span10">
+        <div ng-bind-html-unsafe='snippet'></div>
+        <h4>Search and Buy</h4> 
+        <div ng-bind-html='snippet'></div>
+        <input class="container-fluid" type="text" data-ng-model="filter.title" placeholder="Filter Books with ng-repeat.">
+        <span class="displayOnHover"> Demonstrates Databinding, View Update, Controler & Routes with Angular JS</span>
+
+        <ul class="thumbnails">
+            <li ng-repeat="book in books | filter : filter.title | orderBy : filter.author" >
+                <div class="row session">
+                    <div class="well span8">
+                        <div class="row-fluid">
+                            <div class="span3">
+                                <img ng-src="img/{{book.imgUrl}}" style="width:100px; height:100px" class="img-polaroid"/>
+                            </div>    
+                            <div class="span4">
+                                <h4 class="well-title" ng-bind="book.title" ng-mouseover="titleOnMouseOver()" ng-mouseleave="titleOnMouseLeave()"> </h4>
+                                <div ng-bind="ngBindTextOnMouseOver" class="text-info" style="margin-top='-10px'"></div>
+
+                                <h6 style="padding-top:-10px">{{book.author}}</h6>
+                                <span>{{book.price}}</span><br>
+                                <span>{{book.publicationDate}}</span>                                
+                            </div>                                
+                        </div>
+                        <br>
+                        <div><button class="btn">Add To Cart</button></div>
+                    </div>
+                </div>  
+            </li>
+        </ul>
+        <a class="btn" href="#/addbooks">Add More Books</a>
+    </div>
+</div>
+
+
+

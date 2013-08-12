@@ -1,0 +1,29 @@
+.oldarticle  a {
+	background-color: grey;
+	color: red;
+}
+.article { 
+	color:green;
+}
+
+p.article {
+	color:blue	;
+}
+
+a[href="www.google.com"] { 
+	color:green;
+}
+
+input[type="text"]:focus { 
+	color:green;
+	background: #aaa;
+}
+
+a:hover { 
+	color:red;
+}
+
+a.visited {
+	color:red;
+
+
