@@ -1,6 +1,12 @@
 
     
+<!-- 
+     LEARNING 1: 
+     Voila - this is the HTML template, which has no idea, of what is the module it belongs
+     neither the controller it is tied. 
 
+     It does only one thing - Show the Content (VIEW) - Single Responsibility Principle 
+ -->
 
         <div class="container">
 			<div class="span2"></div>
@@ -17,7 +23,11 @@
 					
                     <!-- No controller here -->
                     <div class="leftTopMargin20"></div>
-                    <a class="btn btn-primary leftTopMargin20" data-ng-click="addBook()" href="#/books">Add Book</a>
+
+    <!-- LEARNING 2:  /books referred is the templates name and not the name of the HTML 
+    -->
+
+                    <a class="btn btn-primary leftTopMargin20" data-ng-click="addBook()" href="/books">Add Book</a>
 					<!-- <span class="span4"></span> -->
                    <!--  <span class="span4"></span>
                     <a class="btn" href="#/books">Back To eStore</a> -->
