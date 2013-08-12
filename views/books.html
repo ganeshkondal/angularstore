@@ -13,17 +13,21 @@
                 <div class="row session">
                     <div class="well span8">
                         <div class="row-fluid">
-                            <div class="span3">
+                            <div class="span2">
                                 <img ng-src="img/{{book.imgUrl}}" style="width:100px; height:100px" class="img-polaroid"/>
                             </div>    
-                            <div class="span4">
-                                <h4 class="well-title" ng-bind="book.title" ng-mouseover="titleOnMouseOver()" ng-mouseleave="titleOnMouseLeave()"> </h4>
+                            <div class="span4" style="margin-right:10px; padding-right:20px">
+                                <h4 class="well-title" ng-bind="book.title " ng-mouseover="titleOnMouseOver()" ng-mouseleave="titleOnMouseLeave()"> </h4>
                                 <div ng-bind="ngBindTextOnMouseOver" class="text-info" style="margin-top='-10px'"></div>
 
                                 <h6 style="padding-top:-10px">{{book.author}}</h6>
-                                <span>{{book.price}}</span><br>
-                                <span>{{book.publicationDate}}</span>                                
-                            </div>                                
+                                <span>{{book.price | currency }}</span><br>
+                                <span>{{book.publicationDate | date:"small"}}</span>                            
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>                                 
+                            </div>
+                                
                         </div>
                         <br>
                         <div><button class="btn">Add To Cart</button></div>
