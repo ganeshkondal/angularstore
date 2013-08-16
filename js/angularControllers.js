@@ -1,4 +1,4 @@
-// no dependencies for this controller
+// modularity via modules. see dependency being imported (ngSanitize,ngResource).
 
 var demoApp = angular.module('demoApp', ['ngSanitize', 'ngResource']);
 
