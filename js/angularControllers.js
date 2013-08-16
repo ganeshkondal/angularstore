@@ -1,4 +1,5 @@
 // no dependencies for this controller
+
 var demoApp = angular.module('demoApp', ['ngSanitize', 'ngResource']);
 
 // Routers
@@ -6,19 +7,19 @@ var demoApp = angular.module('demoApp', ['ngSanitize', 'ngResource']);
 // instead of having demoApp - in all thes.me places,
 // the previous semi-colon could be taken and - config, factory can be
 // with a dot '.' beginning - this is called chaining
+// $routeProvider, $locationProvider - are dependency injected by Angular JS
 demoApp.config(function($routeProvider, $locationProvider) {
     $routeProvider
         .when('/books', {
             controller: 'FindBookController',
             templateUrl: 'views/books.html'
-
         })
         .when('/addbooks', {
             controller: 'FindBookController',
             templateUrl: 'views/addbooks.html'
         })
         .otherwise('/', {
-            redirectTo: '/books'
+            // redirectTo: '/books'
         });
 
         $locationProvider.html5Mode( true );
@@ -34,8 +35,13 @@ demoApp.controller('FindBookController', function($scope, $location, booksFactor
 
     // All initialization code gets in here.,
     function init() {
+        
+        // Factory 
         $scope.books = booksFactory.getBooks();
-        $scope.snippet ='<span style="color:red">---</span>';
+
+        $scope.snippet ='<span style="font-weight:bold; color:red"> TEXT THAT SIMULATES AN EXTERNAL HTML SNIPPET </span> ';
+
+
         $scope.newBook = {};
         $scope.newBook.hidePreview=true;
     }

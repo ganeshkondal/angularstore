@@ -1,47 +1,41 @@
+<!-- Bootstrap CSS used for layout. -->
+<h4>
+    Search and Buy</h4>
 
-<div class="container-fluid">
-    <span class='span4'></span>
-    <div class="span10">
-        <div ng-bind-html-unsafe='snippet'></div>
-        <h4>Search and Buy</h4> 
-        <div ng-bind-html='snippet'></div>
-        <input class="container-fluid" type="text" data-ng-model="filter.title" placeholder="Filter Books with ng-repeat.">
-        <span class="displayOnHover"> Demonstrates Databinding, View Update, Controler & Routes with Angular JS</span>
+<!-- <div ng-bind-html='snippet'></div>
+<div ng-bind-html-unsafe='snippet'></div>
+<br/> -->
 
-        <ul class="thumbnails">
-            <li ng-repeat="book in books | filter : filter.title | orderBy : filter.author" >
-                <div class="row session">
-                    <div class="well span8">
-                        <div class="row-fluid">
-                            <div class="span2">
-                                <img ng-src="img/{{book.imgUrl}}" style="width:100px; height:100px" class="img-polaroid"/>
-                            </div>    
-                            <div class="span4" style="margin-right:10px; padding-right:20px">
-                                <h4 class="well-title" ng-bind="book.title " ng-mouseover="titleOnMouseOver()" ng-mouseleave="titleOnMouseLeave()"> </h4>
-                                <div ng-bind="ngBindTextOnMouseOver" class="text-info" style="margin-top='-10px'"></div>
+<span>Demonstrates Databinding, View Update, Controler &amp; Routes with Angular JS</span>
+<br />
+<input type="text" data-ng-model="filter.title" placeholder="Filter Books with ng-repeat.">
 
-                                <h6 style="padding-top:-10px">{{book.author}}</h6>
-                                <span>{{book.price | currency }}</span><br>
-                                <span>{{book.publicationDate | date:"small"}}</span>                            
-                                <div class="rating">
-                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                </div>                                 
-                            </div>
-                                
-                        </div>
-                        <br>
-                        <div><button class="btn">Add To Cart</button></div>
+
+<div class="thumbnails">
+    <div class="row-fluid">
+        <div ng-repeat="book in books | filter : filter.title | orderBy : filter.author">
+            <div class="row-fluid span3 bookData well wellBackground">
+                <img ng-src="img/{{book.imgUrl}}" class="img-polaroid bookImage" />
+                <br>
+                <div>
+                    <h5 ng-bind="book.title " ng-mouseover="titleOnMouseOver()" ng-mouseleave="titleOnMouseLeave()" class="span*">
+                    </h5>
+                    <div ng-bind="ngBindTextOnMouseOver" class="text-info" style="margin-top='-10px'" class="span*">
                     </div>
-                </div>  
-            </li>
-        </ul>
-
-        <!-- LEARNING :  /books referred is the templates name and not the name of the HTML 
-        -->
-
-        <a class="btn" href="/addbooks">Add More Books</a>
+                    <h6 style="padding-top: -10px" class="span*">
+                        {{book.author}}</h6>
+                    <span class="span*">{{book.price | currency }}</span><br>
+                    <span class="span*">{{book.publicationDate | date:"small"}}</span>
+                    <div class="rating span*">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                </div>
+                <a href="books">
+                    <img src="../img/cart.png" class="cart"/>
+                </a>
+            </div>
+        </div>
     </div>
 </div>
-
-
-
+<!-- LEARNING :  /books referred is the templates name and not the name of the HTML -->
+<a class="btn" href="/addbooks">Add More Books</a> 

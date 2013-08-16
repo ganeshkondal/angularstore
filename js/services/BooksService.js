@@ -7,6 +7,7 @@
 // what is returned is the function that is referred by the 
 // 'booksService'
 demoApp.factory('booksFactory', function() {
+    
     var factory = {};
     var books = [{
         title: 'Angular JS',
@@ -40,6 +41,7 @@ demoApp.factory('booksFactory', function() {
     // Factory Method that fetches the list of books.
     // Either from a backend service or via cached dataset.
     factory.getBooks = function() {
+        // REST service in the backend.
         return books;
     };
     return factory;

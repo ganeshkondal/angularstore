@@ -1,16 +1,59 @@
 /* app css stylesheet */
-.hoverwell:hover {
-  background-color: #52575c;
-  cursor: pointer;
-}
-select, textarea {
-  color: #52575c;
+html, body
+{
+    margin: 0;
+    padding: 0;
 }
 
-.well-title {
-  margin-top: 0px;
+body
+{
+    font: 15px Tahoma , Helvetica, Arial, sans-serif;
+    line-height: 1.4em;
+    color: #4d4d4d;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
 }
-.session {
+
+/*
+	Hack to remove background from Mobile Safari.
+	Can't use it globally since it destroys checkboxes in Firefox and Opera
+*/
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{
+}
+
+.hoverwell:hover
+{
+    background-color: #52575c;
+    cursor: pointer;
+}
+select, textarea
+{
+    color: #52575c;
+}
+
+.bgImage
+{
+    background-image: url('../img/bookshelf.jpg');
+    background-color: #F6F4F0;
+}
+
+.well-title
+{
+    margin-top: 0px;
+}
+
+.wellBackground
+{
+    background-color: #DDD9C3;
+    border: 1px solid #C4BD97;
+}
+
+.session
+{
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -19,31 +62,51 @@ select, textarea {
     user-select: none;
 }
 
-.votingWidget {
-  height: 64px;
-  padding: 7px;
+.votingWidget
+{
+    height: 64px;
+    padding: 7px;
 }
 
-.votingButton {
-  padding-left:6px;
-  cursor:pointer;
+.votingButton
+{
+    padding-left: 6px;
+    cursor: pointer;
 }
 
-.displayOnHover { 
-  display: block;
+.displayOnHover
+{
+    display: block;
 }
 
 .displayNone
 {
-  display:none;
+    display: none;
 }
 
-.picWidthHeight100 { 
-  width:100px;
-  height:100px
+.picWidthHeight100
+{
+    width: 100px;
+    height: 100px;
 }
 
-.leftTopMargin20{ 
-  margin-top: 20px;
-  margin-left: 20px;
+.leftTopMargin20
+{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.cart
+{
+    height: 25px;
+    width: 25px;
+    margin-bottom: 10px;
+}
+.bookImage
+{
+    width: 100px;
+    height: 100px;
+}
+.bookData
+{
+    margin: 3px 3px 3px 3px;
 }
